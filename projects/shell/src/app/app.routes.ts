@@ -28,6 +28,15 @@ export const APP_ROUTES: Routes = [
       }).then((m) => m.FlightsModule),
   },
   {
+    path: 'bus',
+    loadChildren: () =>
+      loadRemoteModule({
+        type: 'manifest',
+        remoteName: 'mfe3',
+        exposedModule: './Module',
+      }).then((m) => m.BusModule),
+  },
+  {
     path: 'react',
     component: WebComponentWrapper,
     data: {

@@ -40,11 +40,12 @@
     </div>
     <h1>Flights Search</h1>
     <h3>Pilih Bandara</h3>
+    <button (click)="sendData()">Send Data to MFE3</button>
     <div>
-        <input type="text" placeholder="From">
+        <input type="text" placeholder="From" [value]="defaultFrom">
     </div>
     <div>
-        <input type="text" placeholder="To">
+        <input type="text" placeholder="To" [value]="defaultTo">
     </div>
     <div>
     </div>
